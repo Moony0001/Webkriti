@@ -190,10 +190,11 @@ header .navbar a:hover{
         margin: 1rem;
         font-size: 2rem;
         background: #eee;
-
-
     }
-
+    #search-form #search-box{
+        width: 90%;
+        margin: 0 1rem;
+    }
  }
 
  @media (max-width:991px){
