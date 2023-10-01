@@ -21,12 +21,11 @@ window.onscroll = () =>{
       let id = sec.getAttribute('id');
 
       if(top => offset && top < offset + height){
-        navLinks.forEach(links => {
+        navLinks.forEach(links =>{
           links.classList.remove('active');
-          document.querySelectorAll('header .navbar a[href*='+id+']').classList.add('active');
+          document.querySelector('header .navbar a[href*='+id+']').classList.add('active');
         });
       };
-
     })
 }
 
@@ -50,10 +49,6 @@ var swiper = new Swiper(".home-slider", {
       clickable: true,
     },
     loop:true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
   });
 
   var swiper = new Swiper(".review-slider", {
@@ -66,16 +61,26 @@ var swiper = new Swiper(".home-slider", {
     loop:true,
     breakpoints: {
       0: {
-        slidesPerView: 1,
+          slidesPerView: 1,
       },
       640: {
-        slidesPerView: 2,
+          slidesPerView: 2,
       },
       768: {
-        slidesPerView: 2,
+          slidesPerView: 2,
       },
       1024: {
-        slidesPerView: 3,
+          slidesPerView: 3,
       },
     },
   });
+
+  function loader(){
+    document.querySelector('.loader-container').classList.add('fade-out');
+  }
+
+  function fadeout(){
+    setInterval(loader, 3000);
+  }
+
+  window.onload = fadeout;

@@ -93,6 +93,7 @@ header .navbar a{
     color: var(--light-color);
 }
 
+
 header .navbar a.active,
 header .navbar a:hover{
     color: #fff;
@@ -110,6 +111,10 @@ header .navbar a:hover{
     color: var(--black);
     border-radius: 50%;
     background: #eee;
+ }
+
+ header .icons .btn{
+    margin-left: .5rem;
  }
 
  header .icons i:hover,
@@ -443,43 +448,43 @@ home .home-slider .slide .image img{
     border-radius: .5rem;
     position: relative;
 }
- .review .slide .fa-quote-right{
+.review .slide .fa-quote-right{
     position: absolute;
     top: 2rem; right: 2rem;
     font-size: 6rem;
     color: #ccc;
- }
-
- .review .slide .user{
+}
+ 
+.review .slide .user{
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
     align-items: center;
     padding-bottom: 1.5rem;
- }
+}
 
- .review .slide .user img{
+.review .slide .user img{
     height: 7rem;
     width: 7rem;
     border-radius: 50%;
     object-fit: cover;
- }
+}
 
- .review .slide .user h3{
+.review .slide .user h3{
     color: var(--black);
     font-size: 2rem;
     padding-bottom: .5rem;
- }
+}
 
- .review .slide .user i{
+.review .slide .user i{
     font-size: 1.3rem;
     color: var(--green);
- }
+}
 
- .review .slide p{
+.review .slide p{
     font-size: 1.5rem;
     line-height: 1.8;
     color: var(--light-color);
- }
+}
 
 .order form{
     max-width:90rem;
@@ -576,11 +581,27 @@ home .home-slider .slide .image img{
     color: var(--green);
 }
 
+.loader-container{
+    position: fixed;
+    top: 0;left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10000;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
 
+.loader-container img{
+    width: 35rem;
+}
 
-
-
-
+.loader-container.fade-out{
+    top: 110%;
+    opacity: 0;
+}
 
 
 
